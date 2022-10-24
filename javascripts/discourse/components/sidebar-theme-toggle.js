@@ -13,6 +13,7 @@ export default class SidebarThemeToggle extends Component {
   @service currentUser;
   @tracked availableThemes = listThemes(this.site);
   @tracked currentTheme = currentThemeId();
+  @tracked hasThemes = this.availableThemes?.length > 1;
 
   @action
   setTheme(themeId, seq = 0) {

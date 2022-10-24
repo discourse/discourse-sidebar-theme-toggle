@@ -1,10 +1,12 @@
-<div class="sidebar-theme-toggle__wrapper">
-  {{d-icon (theme-setting "toggle_icon")}}
+{{#if this.hasThemes}}
+  <div class="sidebar-theme-toggle__wrapper">
+    {{d-icon (theme-setting "toggle_icon")}}
 
-  <ComboBox
-    @content={{this.availableThemes}}
-    @value={{this.currentTheme}}
-    @onChange={{action "setTheme"}}
-    @class="sidebar-theme-toggle-dropdown"
-  />
-</div>
+    <ComboBox
+      @content={{this.availableThemes}}
+      @value={{this.currentTheme}}
+      @onChange={{action "setTheme"}}
+      @class="sidebar-theme-toggle-dropdown"
+    />
+  </div>
+{{/if}}
