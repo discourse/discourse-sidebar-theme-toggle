@@ -105,3 +105,13 @@
     }
   }
 }
+
+// if the sidebar content isn't scrollable on mobile
+// the theme dropdown isn't scrollable either
+// this is a slight hack to always make it scrollable
+.mobile-view {
+  .hamburger-panel .menu-panel.slide-in .panel-body-contents {
+    min-height: calc(100% + 0.25em);
+    flex: 1;
+  }
+}
