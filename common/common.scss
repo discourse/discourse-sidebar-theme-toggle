@@ -45,7 +45,6 @@
     @if $hide-theme-name == "true" {
       left: 0.5em;
     }
-    bottom: -1px; // optical alignment
     z-index: z("dropdown") + 1;
     pointer-events: none;
   }
