@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 de:
+  theme_metadata:
+    description: "Füge ein Drop-down zum schnellen Wechsel zwischen Themes zu deiner Discourse-Seitenleiste hinzu"
