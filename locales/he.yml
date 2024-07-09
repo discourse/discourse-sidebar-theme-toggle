@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 he:
+  theme_metadata:
+    description: "החלפת מתג מהיר להחלפת ערכת עיצוב לסרגל הצד של Discourse"
