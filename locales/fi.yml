@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 fi:
+  theme_metadata:
+    description: "Lisää nopea teeman vaihto Discoursen sivupalkkiin"

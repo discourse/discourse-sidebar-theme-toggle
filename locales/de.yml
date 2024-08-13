@@ -6,4 +6,4 @@
 
 de:
   theme_metadata:
-    description: "Füge ein Drop-down zum schnellen Wechsel zwischen Themes zu deiner Discourse-Seitenleiste hinzu"
+    description: "Füge einen Schalter zum schnellen Wechsel zwischen Themes zu deiner Discourse-Seitenleiste hinzu"

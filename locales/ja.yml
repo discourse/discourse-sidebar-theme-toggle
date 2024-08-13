@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 ja:
+  theme_metadata:
+    description: "Discourse サイドバーにクイックテーマトグルを追加します"

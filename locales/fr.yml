@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 fr:
+  theme_metadata:
+    description: "Ajoutez un changement de thème rapide à la barre latérale de Discourse"
