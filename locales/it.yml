@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 it:
+  theme_metadata:
+    description: "Aggiungi un interruttore rapido di tema alla barra laterale del tuo Discourse"
