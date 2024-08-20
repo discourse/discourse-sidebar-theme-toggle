@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 pt_BR:
+  theme_metadata:
+    description: "Adicionar alternância rápida de tema à barra lateral do seu Discourse"

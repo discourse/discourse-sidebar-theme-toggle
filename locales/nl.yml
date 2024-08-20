@@ -5,3 +5,5 @@
 # https://translate.discourse.org/
 
 nl:
+  theme_metadata:
+    description: "Voeg een snelle themaschakelaar toe aan je Discourse-zijbalk"
