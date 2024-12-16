@@ -1,5 +1,5 @@
 toggle_icon:
-  default: "paint-brush"
+  default: "paintbrush"
 
 hide_theme_name:
   default: false
