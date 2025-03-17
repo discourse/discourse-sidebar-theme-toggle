@@ -11,6 +11,7 @@ import {
 export default class SidebarThemeToggle extends Component {
   @service site;
   @service currentUser;
+
   @tracked availableThemes = listThemes(this.site);
   @tracked currentTheme = currentThemeId();
   @tracked hasThemes = this.availableThemes?.length > 1;

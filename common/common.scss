@@ -2,6 +2,7 @@
   display: flex;
   align-items: center;
   width: 100%;
+
   @if $hide-theme-name == "true" {
     width: auto;
   }
@@ -42,6 +43,7 @@
     font-size: 0.85em;
     color: var(--primary-medium);
     left: 0.75em;
+
     @if $hide-theme-name == "true" {
       left: 0.5em;
     }
@@ -63,6 +65,7 @@
   .select-kit-body {
     // !importants for overriding some inline styles
     width: 16.5em !important;
+
     @if $hide-theme-name == "true" {
       transform: translate(1em, -3em) !important;
       min-width: unset !important;
@@ -71,6 +74,7 @@
 
   &.select-kit.combo-box .select-kit-header {
     padding-left: 3em;
+
     @if $hide-theme-name == "true" {
       padding: 1em;
     }
@@ -87,12 +91,15 @@
     .selected-name {
       white-space: nowrap;
       min-width: 0;
+
       @if $hide-theme-name == "true" {
         display: none;
       }
     }
+
     .caret-icon {
       color: var(--primary-low-mid);
+
       @if $hide-theme-name == "true" {
         display: none;
       }
@@ -100,6 +107,7 @@
 
     .name {
       min-width: 0;
+
       @include ellipsis;
     }
   }
