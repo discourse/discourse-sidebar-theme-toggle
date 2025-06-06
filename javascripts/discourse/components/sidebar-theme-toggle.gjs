@@ -1,12 +1,15 @@
 import Component from "@glimmer/component";
 import { tracked } from "@glimmer/tracking";
+import { hash } from "@ember/helper";
 import { action } from "@ember/object";
 import { service } from "@ember/service";
+import icon from "discourse/helpers/d-icon";
 import {
   currentThemeId,
   listThemes,
   setLocalTheme,
 } from "discourse/lib/theme-selector";
+import ComboBox from "select-kit/components/combo-box";
 
 export default class SidebarThemeToggle extends Component {
   @service site;
@@ -31,4 +34,20 @@ export default class SidebarThemeToggle extends Component {
       window.location.reload();
     }
   }
+
+  <template>
+    {{#if this.hasThemes}}
+      <div class="sidebar-theme-toggle__wrapper">
+        {{icon settings.toggle_icon}}
+
+        <ComboBox
+          @content={{this.availableThemes}}
+          @value={{this.currentTheme}}
+          @onChange={{action "setTheme"}}
+          class="sidebar-theme-toggle-dropdown"
+          @options={{hash placementStrategy="absolute" placement="top-start"}}
+        />
+      </div>
+    {{/if}}
+  </template>
 }
