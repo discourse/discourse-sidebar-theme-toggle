@@ -73,7 +73,7 @@
   }
 
   &.select-kit.combo-box .select-kit-header {
-    padding-left: 3em;
+    padding-left: 2.5em;
 
     @if $hide-theme-name == "true" {
       padding: 1em;
@@ -84,8 +84,7 @@
     position: relative;
 
     .select-kit-header-wrapper {
-      margin-left: -0.5em;
-      width: calc(100% + 0.5em);
+      width: 100%;
     }
 
     .selected-name {
@@ -106,6 +105,7 @@
     }
 
     .name {
+      display: inline-block;
       min-width: 0;
 
       @include ellipsis;
