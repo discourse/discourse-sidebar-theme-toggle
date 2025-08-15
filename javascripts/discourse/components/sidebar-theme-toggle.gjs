@@ -43,7 +43,7 @@ export default class SidebarThemeToggle extends Component {
         <ComboBox
           @content={{this.availableThemes}}
           @value={{this.currentTheme}}
-          @onChange={{action "setTheme"}}
+          @onChange={{this.setTheme}}
           class="sidebar-theme-toggle-dropdown"
           @options={{hash placementStrategy="absolute" placement="top-start"}}
         />
