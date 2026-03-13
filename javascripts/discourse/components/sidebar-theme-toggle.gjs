@@ -9,30 +9,30 @@ import {
   listThemes,
   setLocalTheme,
 } from "discourse/lib/theme-selector";
-import ComboBox from "select-kit/components/combo-box";
+import ComboBox from "discourse/select-kit/components/combo-box";
 
 export default class SidebarThemeToggle extends Component {
   @service site;
   @service currentUser;
 
-  @tracked availableThemes = listThemes(this.site);
   @tracked currentTheme = currentThemeId();
-  @tracked hasThemes = this.availableThemes?.length > 1;
+  availableThemes = listThemes(this.site);
+
+  get hasThemes() {
+    return this.availableThemes?.length > 1;
+  }
 
   @action
-  setTheme(themeId, seq = 0) {
+  async setTheme(themeId, seq = 0) {
     this.currentTheme = themeId;
 
     if (this.currentUser) {
-      this.currentUser.findDetails().then((user) => {
-        seq = user.get("user_option.theme_key_seq");
-        setLocalTheme([themeId], seq);
-        window.location.reload();
-      });
-    } else {
-      setLocalTheme([themeId], seq);
-      window.location.reload();
+      const user = await this.currentUser.findDetails();
+      seq = user.get("user_option.theme_key_seq");
     }
+
+    setLocalTheme([themeId], seq);
+    window.location.reload();
   }
 
   <template>
@@ -44,8 +44,8 @@ export default class SidebarThemeToggle extends Component {
           @content={{this.availableThemes}}
           @value={{this.currentTheme}}
           @onChange={{this.setTheme}}
-          class="sidebar-theme-toggle-dropdown"
           @options={{hash placementStrategy="absolute" placement="top-start"}}
+          class="sidebar-theme-toggle-dropdown"
         />
       </div>
     {{/if}}
